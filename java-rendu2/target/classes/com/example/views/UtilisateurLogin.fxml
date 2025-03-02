@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+    prefHeight="557.0" prefWidth="860.0" stylesheets="@../values/login.css"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="com.example.controllers.RegisterUserController">
+    <children>
+       
+
+        <VBox  prefHeight="557.0" prefWidth="486.0"
+            style="-fx-background-color: #FFF;"  HBox.hgrow="ALWAYS">
+            <children >
+                <HBox  translateY="20" translateX="2" prefHeight="71.0" prefWidth="418.0" spacing="10.0">
+                    <children>
+                        <Label  text="Nom :" textFill="#133E87">
+                            <font>
+                                <Font name="Tahoma bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="nomField" promptText="Entrez votre nom"
+                            prefHeight="45.0" prefWidth="305.0"
+                            style="-fx-background-color:transparent; -fx-border-radius: 5px;" />
+                    </children>
+                </HBox>
+
+                <HBox  translateY="20" translateX="-22" prefHeight="71.0" prefWidth="418.0" spacing="10.0">
+                    <children>
+                        <Label text="Prénom :" textFill="#133E87">
+                            <font>
+                                <Font name="Tahoma bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="prenomField" promptText="Entrez votre prénom"
+                            prefHeight="45.0" prefWidth="305.0"
+                            style="-fx-background-color: transparent; -fx-border-radius: 5px;" />
+                    </children>
+                </HBox>
+
+                <HBox translateX="-5" translateY="20" prefHeight="71.0" prefWidth="418.0" spacing="10.0">
+                    <children>
+                        <Label text="Email :" textFill="#133E87">
+                            <font>
+                                <Font name="Tahoma bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="emailField" promptText="Entrez votre email"
+                            prefHeight="45.0" prefWidth="305.0"
+                            style="-fx-background-color: transparent; -fx-border-radius: 5px;" />
+                    </children>
+                </HBox>
+
+                <HBox translateX="-3" translateY="20" prefHeight="71.0" prefWidth="418.0" spacing="10.0">
+                    <children>
+                        <Label text="Type :" textFill="#133E87">
+                            <font>
+                                <Font name="Tahoma bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="typeComboBox" prefHeight="45.0" prefWidth="305.0"
+                           style="-fx-background-color: transparent; -fx-border-radius: 5px;">
+                        </ComboBox>
+                    </children>
+                </HBox>
+
+                <HBox translateX="-33" translateY="20" prefHeight="71.0" prefWidth="418.0" spacing="10.0">
+                    <children>
+                        <Label text="Password :" textFill="#133E87">
+                            <font>
+                                <Font name="Tahoma bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <PasswordField fx:id="passwordField"
+                            promptText="Entrez votre mot de passe" prefHeight="45.0"
+                            prefWidth="305.0"
+                            style="-fx-background-color: transparent; -fx-border-radius: 5px;" />
+                    </children>
+                </HBox>
+
+                <HBox  translateY="20" alignment="CENTER" spacing="10.0">
+                 <VBox alignment="CENTER" layoutX="100.0" spacing="10.0">
+                    <Button text="Sign up" onAction="#handleSubmit" prefHeight="35.0"
+            prefWidth="250.0"
+                      style="-fx-background-color: #133E87; 
+                   -fx-text-fill:rgb(250, 250, 250); 
+                   -fx-border-color: #133E87; 
+                   -fx-border-width: 2px; 
+                   -fx-border-radius: 10px; 
+                   -fx-background-radius: 10px;" /> 
+                    <Button text="sign in" onAction="#switchToLogin" prefHeight="35.0"
+            prefWidth="250.0"
+                        style="-fx-background-color:transparont ; 
+                   -fx-text-fill: #133E87; 
+                   -fx-border-color: #133E87; 
+                   -fx-border-width: 2px; 
+                   -fx-border-radius: 10px; 
+                   -fx-background-radius: 10px;"  />
+                          </VBox>
+                </HBox>
+            </children>
+            <padding>
+                <Insets left="40.0" />
+            </padding>
+        </VBox>
+         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="430.0"
+            style="-fx-background-color: #CBDCEB;" HBox.hgrow="ALWAYS">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true"
+                    preserveRatio="true">
+                    <image>
+                        <Image url="@/com/example/images/lock.gif" />
+                    </image>
+                </ImageView>
+                <Label text="Créez votre compte" textFill="#133e87">
+                    <font>
+                        <Font name="Tahoma Bold" size="24.0" />
+                    </font>
+                </Label>
+            </children>
+            <padding>
+                <Insets top="20.0" />
+            </padding>
+        </VBox>
+    </children>
+</HBox>

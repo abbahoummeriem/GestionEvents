@@ -1,0 +1,105 @@
+/* Conteneur du formulaire (fond et espacement) */
+.root {
+    -fx-background-color: #CBDCEB; /* Bleu clair */
+    -fx-padding: 20px;
+    -fx-alignment: center;
+}
+
+/* Conteneur du champ de texte */
+.field-container {
+    -fx-padding: 10 0 10 0;
+    -fx-alignment: center-left;
+}
+
+
+
+/* Style général pour TextField et ComboBox */
+.text-field, .combo-box {
+    -fx-font-size: 14px;
+    -fx-border-radius: 8px;
+    -fx-padding: 10px;
+    -fx-border-color: transparent transparent #608BC1 transparent;
+    -fx-border-width: 0 0 2px 0;
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.0, 0, 2);
+}
+
+/* Style pour les TextField lorsqu'ils sont focalisés */
+.text-field:focused {
+    -fx-border-color: #4a90e2;
+    -fx-background-color: #f7f7f7;
+}
+
+/* Style pour ComboBox lorsqu'il est focalisé */
+.combo-box:focused {
+    -fx-border-color: #4a90e2;
+    -fx-background-color: #f7f7f7;
+}
+
+/* Style pour la flèche de la ComboBox */
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+    -fx-border-radius: 8px;
+    -fx-padding: 5px;
+}
+
+.combo-box .arrow-button:hover {
+    -fx-background-color: rgba(96, 139, 193, 0.1);
+}
+
+/* Style des options dans la liste déroulante */
+.combo-box .list-cell {
+    -fx-font-size: 14px; /* Taille de la police des options */
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+
+/* Style des options survolées */
+.combo-box .list-cell:hover {
+    -fx-background-color: rgba(96, 139, 193, 0.1);
+    -fx-text-fill: black;
+}
+
+
+/* Conteneur des boutons */
+.button-container {
+    -fx-spacing: 20px;
+    -fx-alignment: center;
+}
+.btn-login {
+    -fx-font-size: 14px;
+    -fx-border-radius: 8px;
+    -fx-padding: 10px;
+    -fx-border-color: transparent transparent #608BC1 transparent;
+    -fx-border-width: 0 0 2px 0;
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.0, 0, 2);
+    -fx-cursor: hand;
+}
+
+.btn-login:hover {
+    -fx-background-color: rgba(96, 139, 193, 0.1); /* Légère couleur survol */
+}
+
+
+/* Conteneur pour l'image et le titre */
+.image-container {
+    -fx-alignment: center;
+    -fx-padding: 10px;
+}
+
+/* Style de l'image */
+.image-container ImageView {
+    -fx-opacity: 0.8; /* Légèrement transparent pour un effet esthétique */
+}
+
+
+/* Style pour les boutons au survol */
+.button:hover { 
+    -fx-background-color: #45a049; /* Couleur de fond plus foncée au survol */
+}
+
+/* Style pour les boutons quand on clique */
+.button:pressed {
+    -fx-background-color: #388e3c; /* Couleur de fond encore plus foncée quand cliqué */
+}

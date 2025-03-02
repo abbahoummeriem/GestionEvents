@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.controllers.homeUserController">
+   <children>
+      <VBox prefHeight="492.0" prefWidth="179.0" style="-fx-background-color: #133E87;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="88.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true" translateX="50.0" translateY="32.0">
+               <image>
+                  <Image url="/com/example/images/profilee.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="userNameLabel" style="-fx-font-family: 'Bookman Old Style'; -fx-font-size: 16px; -fx-font-weight: bold;" text="Nom d'utilisateur" textFill="WHITE" translateX="55.0" translateY="40.0" />
+            <Line endX="22.0" layoutX="22.0" layoutY="22.0" startX="-100.0" stroke="WHITE" translateY="55.0">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="33.0" right="2.0" top="22.0" />
+               </VBox.margin>
+            </Line>
+            <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #133E87; -fx-text-fill: WHITE;"  text="Home"  onAction="#onHome" translateX="-15.0" translateY="74.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="/com/example/images/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #133E87; -fx-text-fill: WHITE;" text="Réservation" onAction="#onReservation"  translateY="85.0" translateX="0.0" >
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="/com/example/images/reservation.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>  
+            <Button mnemonicParsing="false" style="-fx-background-color: #133E87; -fx-font-weight: bold; -fx-border-color: #133E87; -fx-text-fill: WHITE;" text="hIstorique" onAction="#hostorique" translateX="35.0" translateY="100.0"  >
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="/com/example/images/historique.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>          
+            <Line endX="22.0" layoutX="22.0" layoutY="22.0" startX="-100.0" stroke="WHITE" translateY="77.0">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="33.0" right="2.0" top="33.0" />
+               </VBox.margin>
+            </Line>
+            <Button mnemonicParsing="false" style="-fx-background-color: #133E87; -fx-font-weight: bold; -fx-border-color: #133E87; -fx-text-fill: WHITE;" text="Logout" onAction="#onlogout" translateX="50.0" translateY="170.0"  >
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="/com/example/images/out.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <ImageView fitHeight="70.0" fitWidth="240.0"  layoutX="340.0" layoutY="10.0" >
+                     <image>
+                        <Image url="/com/example/images/logoo.png" />
+                     </image>
+                  </ImageView>
+      <Label fx:id="bienvenueLabel" layoutX="200.0" layoutY="140.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Bonjour " />
+<Label fx:id="infoMessage" layoutX="200.0" layoutY="190.0" style="-fx-font-size: 16px; -fx-font-weight:  lighter;" text="Bienvenue dans notre application de réservation d'espaces scolaires," />
+<Label fx:id="infoMessageLine2" layoutX="200.0" layoutY="220.0" style="-fx-font-size: 16px; -fx-font-weight: lighter;" text="Organisez vos événements facilement en réservant un espace" />
+<Label fx:id="infoMessageLine2" layoutX="200.0" layoutY="250.0" style="-fx-font-size: 16px; -fx-font-weight: lighter;" text="adapté à vos besoins." />
+
+
+<Button onAction="#onReservation" layoutX="350.0" layoutY="290.0" mnemonicParsing="false" 
+        style="-fx-background-color:rgb(39, 83, 161); -fx-font-size: 14px; -fx-text-fill: white; -fx-padding: 10px 20px;" 
+        text="Accéder à la réservation" />
+   </children>
+</AnchorPane>

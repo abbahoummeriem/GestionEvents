@@ -1,0 +1,18 @@
+.profile-layout{
+    -fx-background-color :#133E87;
+    -fx-background-radius: 0 0 50 50;
+}
+.button{
+    -fx-background-color:#133E87;
+    -fx-background-radius: 50;
+}
+.image {
+    -fx-border-radius: 50; 
+    -fx-background-radius: 50; 
+}
+.white-background{
+    -fx-background-color: white;
+}
+
+
+

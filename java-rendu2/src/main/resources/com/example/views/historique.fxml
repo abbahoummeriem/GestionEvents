@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane stylesheets="@styles.css"  xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.controllers.historique">
+    <children>
+        <VBox prefHeight="492.0" prefWidth="179.0" style="-fx-background-color: #133E87;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="88.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true" translateX="50.0" translateY="32.0">
+               <image>
+                  <Image url="/com/example/images/profilee.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="userNameLabel" style="-fx-font-family: 'Bookman Old Style'; -fx-font-size: 16px; -fx-font-weight: bold;" text="Nom d'utilisateur" textFill="WHITE" translateX="55.0" translateY="40.0" />
+            <Line endX="22.0" layoutX="22.0" layoutY="22.0" startX="-100.0" stroke="WHITE" translateY="55.0">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="33.0" right="2.0" top="22.0" />
+               </VBox.margin>
+            </Line>
+            <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #133E87; -fx-text-fill: WHITE;"  text="Home"  onAction="#onHome" translateX="-15.0" translateY="74.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="/com/example/images/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #133E87; -fx-text-fill: WHITE;" text="Réservation" onAction="#onReservation"  translateY="85.0" translateX="0.0" >
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="/com/example/images/reservation.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>  
+            <Button mnemonicParsing="false" style="-fx-background-color: #133E87; -fx-font-weight: bold; -fx-border-color: #133E87; -fx-text-fill: WHITE;" text="historique" onAction="#historique" translateX="35.0" translateY="100.0"  >
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image  url="/com/example/images/historique.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>          
+            <Line endX="22.0" layoutX="22.0" layoutY="22.0" startX="-100.0" stroke="WHITE" translateY="77.0">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="33.0" right="2.0" top="33.0" />
+               </VBox.margin>
+            </Line>
+            <Button mnemonicParsing="false" style="-fx-background-color: #133E87; -fx-font-weight: bold; -fx-border-color: #133E87; -fx-text-fill: WHITE;" text="Logout" onAction="#onlogout" translateX="50.0" translateY="170.0"  >
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="/com/example/images/out.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+       <Label text="VOTRE Historique"   translateX="320.0" translateY="20.0" style="-fx-font-size: 20px; 
+            -fx-font-weight: bold; 
+            -fx-text-fill: #133E87; 
+            -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 4, 0.0, 0, 2);" />
+    <TableView fx:id="tableReservations" layoutX="180.0" layoutY="100.0" prefHeight="280.0" prefWidth="470.0">
+        <columns>
+           <TableColumn fx:id="colNomEvent" text="Nom de l'Événement" />
+<TableColumn fx:id="colNomSalle" text="Nom de la Salle" />
+<TableColumn fx:id="colNomTerrain" text="Nom du Terrain" />
+<TableColumn fx:id="colDateEvent" text="Date de l'Événement" />
+
+
+        </columns>
+    </TableView>
+   </children>
+
+</AnchorPane>
